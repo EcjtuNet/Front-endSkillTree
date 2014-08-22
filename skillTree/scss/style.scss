@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* Front-end Skill Tree
+ *
+ * @author           Lancelot at EcjtuNet
+ * @version          0.1
+ * @last-time        2014.8.6
+ *
+ */
+
+
+/* 文件载入 ----------------------------------------------------------*/
+
+@import  "data";    			// Sass Variable
+@import  "reset";   			// CSS Reset
+@import  "mixin";   			// Mixin
+@import  "csshake"; 			// CSShake
+@import  "pre"; 				// CSS Pre
+@import  "animation";			// Animation
+
+
+/* CSS ---------------------------------------------------------------*/
+
+#wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#content {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	padding: 24px 0;
+	// background: #eee;
+}
+#title {
+	height: 48px;
+	border-radius: 5px;
+	// @include boxShadow(9px, 6px);
+	background: $gray;
+	color: #fff;
+	font: $title-font;
+	text-align: center;
+	// &:hover {
+	// 	background: $black;
+	// }
+}
+#tree {
+	ul.sort {
+		float: left;
+		ul.sort > li {
+			float: left;
+		}
+	}
+	 a {
+		display: inline-block;
+		padding: 6px 12px;
+		border-radius: 5px;
+		// @include boxShadow(9px, 6px);
+		background: $gray;
+		color: #fff;
+		font: $tree-font;
+	}
+	.basic:hover {
+		background: lighten($gray, 5%);
+	}
+	.active:hover {
+		background: #b6935b;
+	}
+	.passive:hover {
+		background: #60a179;
+	}
+}
+#skill {
+	width: 591px;
+	height: 572px;
+}

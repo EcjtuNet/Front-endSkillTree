@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* 圆角
+ --------------------------------------------------*/
+
+@mixin transition($direction, $tran) {
+    -webkit-transition : $direction $tran;
+       -moz-transition : $direction $tran;
+         -o-transition : $direction $tran;
+            transition : $direction $tran;
+}
+
+
+@mixin radius($radius:5px) {
+    -webkit-border-radius : $radius;
+       -moz-border-radius : $radius;
+        -ms-border-radius : $radius;
+            border-radius : $radius;
+}
+
+@mixin appearance($style:button) {
+    appearance : $style;
+    -moz-appearance : $style;
+    -webkit-appearance : $style;
+}
+
+@mixin animation($name, $duration, $timing-function, $iternation-count, $direction) {
+    -webkit-animation : $name $duration $timing-function $iternation-count $direction;
+       -moz-animation : $name $duration $timing-function $iternation-count $direction;
+         -o-animation : $name $duration $timing-function $iternation-count $direction;
+            animation : $name $duration $timing-function $iternation-count $direction;
+}
+
+@mixin rotate($value) {
+    -webkit-transform : rotate($value);
+       -moz-transform : rotate($value);
+        -ms-transform : rotate($value);
+         -o-transform : rotate($value);
+}
+
+@mixin boxShadow($value1, $value2) {
+    box-shadow: inset 0px 0px $value1 $value2 rgba(0,0,0,.1);
+}
